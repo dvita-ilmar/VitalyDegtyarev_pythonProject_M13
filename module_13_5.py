@@ -38,7 +38,7 @@ kb.insert(button2)
 # Стартовая функция
 @dp.message_handler(commands=['start'])
 async def start(message):
-    await message.answer("Привет!", reply_markup = kb)
+    await message.answer("Привет! Я бот помогающий твоему здоровью", reply_markup = kb)
 
 
 # Блок функций машины состояний для расчета калорий
