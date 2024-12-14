@@ -74,6 +74,12 @@ async def inform(message):
     await message.answer('https://www.calc.ru/Formula-Mifflinasan-Zheora.html')
 
 
+# Реакция на прочие сообщения пользователя
+@dp.message_handler()
+async def all_message(message):
+    await message.answer("Введите команду /start, чтобы начать общение.")
+
+
 # Запуск Телеграм-бота
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates=True)
